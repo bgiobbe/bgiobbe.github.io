@@ -84,6 +84,156 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+:root {
+  --dark: #342B25FF;
+  --dark-translucent: #342B2580;
+  --bright: #ADC178FF;
+  --bright-translucent: #ADC17880;
+  --pastel1: #DDE5B4FF;
+  --pastel2: #F0EAD2FF;
+  --color5: #A98467FF;
+  --font1: "Averia Libre", helvetica, arial, sans-serif; 
+  --font2: Philosopher, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--pastel2);
+  font-family: Philosopher, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: var(--font1);
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: var(--font1);
+  font-size: 2em;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: var(--font1);
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+/* ----- HEADER ----- */
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
+  padding: 10px;
+  border-bottom: 0.5px solid var(--bright);
+}
+
+nav ul li {
+  display: inline-block;
+  font-family: var(--font1);
+  font-size: 0.875em;
+  list-style: none;
+  margin: 0;
+  padding: 0 auto;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  color: var(--bright);
+  padding: 5px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: var(--bright);
+  color: var(--dark);
+  border-radius: 10px;
+}
+
+/* ----- HEADER - NAME ----- */
+
+#name {
+  background: url("../img/background.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 200px;
+}
+
+#name {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column;
+  min-height: 200px;
+}
+
+#name .content {
+  background-color: var(--bright-translucent);
+  border-radius: 10px;
+  color: var(--dark);
+  text-align: center;
+  padding: 10px;
+}
+
+#name h1,
+#name h2,
+#name h3 {
+  margin: 0;
+}
+
+#name h3 span {
+  font-size: 70%;
+  font-style: italic;
+}
+
+/* ----- MAIN ----- */
+
+#about {
+  background-color: var(--pastel2);
+  color: var(--dark);
+}
+
+#about  .content-wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+#about figure {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#about img {
+  width: 100%;
+  box-shadow: 5px 5px var(--bright);
+}
+
+#about-text h2,
+#about-text h3 {
+  text-align: center;
+}
+
+#about h3 span {
+  font-weight: bold;
+}
+
+/* ----- FOOTER ----- */
+
+footer p {
+  color: var(--bright);
+  font-size: 0.875em;
+  text-align: center;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -167,9 +317,9 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+/*@media only screen and (min-width: 35em) {*/
   /* Style adjustments for viewports that meet the condition */
-}
+/*}*/
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
