@@ -125,8 +125,13 @@ h3 {
   font-weight: normal;
 }
 
+p {
+  margin: 0;
+}
+
 .content-wrapper {
   margin: 0 auto;
+  padding: 20px 0;
   width: 90%;
 }
 
@@ -193,7 +198,8 @@ nav ul li a:hover {
   font-style: italic;
 }
 
-/* ----- MAIN ----- */
+/* ----- MAIN - SKILLS ----- */
+
 #skills {
   background-color: var(--bright);
   color: var(--dark);
@@ -214,8 +220,61 @@ nav ul li a:hover {
   list-style: none;
   margin: 0.5em;
   padding: 0.5em;
-
 }
+
+/* ----- MAIN - Projects ----- */
+
+#projects {
+  background-color: var(--dark);
+  padding: 20px 0;
+}
+
+#projects article {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--pastel2);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+}
+
+#projects article figure {
+  margin: 0;
+  padding: 0;
+}
+
+#projects article figure img {
+  width: 100%;
+}
+
+#projects article p {
+  padding: 10px 0;
+}
+
+#projects article .visit a {
+  background-color: var(--pastel1);
+  border-radius: 8px;
+  color: var(--dark);
+  margin: 0 1em;
+  padding: 5px;
+  text-decoration: none;
+}
+
+#projects article .visit a:hover {
+  background-color: var(--bright);
+  color: var(--dark);
+}
+
+#projects article .description a {
+  background-color: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+}
+/* ----- MAIN - ABOUT ME ----- */
 
 #about {
   background-color: var(--pastel2);
@@ -245,8 +304,66 @@ nav ul li a:hover {
   text-align: center;
 }
 
-#about h3 span {
-  font-weight: bold;
+/* ----- MAIN - CONTACT ME ----- */
+
+#contact {
+  background-color: var(--dark);
+  color: var(--pastel2);
+}
+
+#contact .content-wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact figure {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  width: 288px;
+}
+
+#contact img {
+  width: 100%;
+}
+
+#contact a {
+  color: var(--pastel2);
+  text-decoration: none;
+}
+
+#contact .social-icons {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0 30px 0;
+}
+
+#contact address {
+  font-size: 1.5em;
+  font-style: normal;
+  margin: 15px 0;
+  padding: 15px;
+  border: 5px outset var(--color5);
+}
+
+#contact .social-icons p {
+  font-size: 3em;
+  margin: 0;
+  padding: 0 1em;
+}
+
+.fa-linkedin {
+  /*color: #2C64BC;*/  /* from linkedin.com */
+  color: #457cd3;  /* brighten it for better contrast */
+}
+
+.fa-github {
+  /* color: #181617 */  /* from github.com logo page*/
+  color: #e7e9e8;     /* inverted for contrast */
 }
 
 /* ----- FOOTER ----- */
