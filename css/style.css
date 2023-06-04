@@ -175,6 +175,7 @@ nav ul li a:hover {
   background: url("../img/background.jpg") no-repeat center center;
   background-size: cover;
   min-height: 200px;
+  padding: 30px 0;
 }
 
 #name {
@@ -194,7 +195,7 @@ nav ul li a:hover {
 }
 
 #name h3 span {
-  font-size: 70%;
+  font-size: 80%;
   font-style: italic;
 }
 
@@ -203,7 +204,11 @@ nav ul li a:hover {
 #skills {
   background-color: var(--bright);
   color: var(--dark);
-  padding: 20px 0;
+  padding: 30px 0;
+}
+
+#skills .skill-category {
+  margin: 30px 0;
 }
 
 #skills ul {
@@ -218,7 +223,7 @@ nav ul li a:hover {
   background-color: var(--pastel1);
   border-radius: 5px;
   list-style: none;
-  margin: 0.5em;
+  margin: 0.25em;
   padding: 0.5em;
 }
 
@@ -226,7 +231,7 @@ nav ul li a:hover {
 
 #projects {
   background-color: var(--dark);
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 #projects article {
@@ -236,7 +241,7 @@ nav ul li a:hover {
   align-items: center;
   border: 1px solid var(--pastel2);
   border-radius: 10px;
-  margin: 20px;
+  margin: 30px 0;
   padding: 20px;
 }
 
@@ -249,17 +254,38 @@ nav ul li a:hover {
   width: 100%;
 }
 
+#projects article h2 {
+  margin: 30px 0;
+}
+
+#projects article .description {
+  margin: 0;
+  padding: 0;
+}
+
+#projects article .description a {
+  background-color: inherit;
+  color: inherit;
+  text-decoration: underline;
+}
+
 #projects article p {
-  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+
+#projects article .visit {
+  margin: 30px 0;
 }
 
 #projects article .visit a {
   background-color: var(--pastel1);
-  border-radius: 8px;
+  border-radius: 16px;
   color: var(--dark);
-  margin: 0 1em;
-  padding: 5px;
+  margin: 0 0.75em;
+  padding: 10px 14px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 #projects article .visit a:hover {
@@ -267,18 +293,13 @@ nav ul li a:hover {
   color: var(--dark);
 }
 
-#projects article .description a {
-  background-color: inherit;
-  color: inherit;
-  margin: 0;
-  padding: 0;
-  text-decoration: underline;
-}
+
 /* ----- MAIN - ABOUT ME ----- */
 
 #about {
   background-color: var(--pastel2);
   color: var(--dark);
+  padding: 60px 0;
 }
 
 #about .content-wrapper {
@@ -301,7 +322,12 @@ nav ul li a:hover {
 
 #about-text h2,
 #about-text h3 {
+  margin: 20px 0;
   text-align: center;
+}
+
+#about-text p {
+  margin-top: 20px;
 }
 
 /* ----- MAIN - CONTACT ME ----- */
@@ -309,6 +335,7 @@ nav ul li a:hover {
 #contact {
   background-color: var(--dark);
   color: var(--pastel2);
+  margin-top: 60px;
 }
 
 #contact .content-wrapper {
@@ -321,7 +348,7 @@ nav ul li a:hover {
 #contact figure {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin: 60px 0;
   width: 288px;
 }
 
@@ -334,39 +361,44 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
+#contact address {
+  font-size: 1.5em;
+  font-style: normal;
+  line-height: 2em;
+  text-align: center;
+}
+
 #contact .social-icons {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
   align-items: center;
-  margin: 20px 0 30px 0;
-}
-
-#contact address {
-  font-size: 1.5em;
-  font-style: normal;
-  margin: 15px 0;
-  padding: 15px;
-  border: 5px outset var(--color5);
+  margin: 20px 0;
 }
 
 #contact .social-icons p {
-  font-size: 3em;
+  font-size: 3rem;
   margin: 0;
-  padding: 0 1em;
+  padding: 0 1rem;
 }
 
-.fa-linkedin {
-  /*color: #2C64BC;*/  /* from linkedin.com */
-  color: #457cd3;  /* brighten it for better contrast */
-}
-
+.fa-linkedin,
 .fa-github {
-  /* color: #181617 */  /* from github.com logo page*/
-  color: #e7e9e8;     /* inverted for contrast */
+  color: var(--pastel1);
+  /*color: #2C64BC;*/  /* from linkedin.com */
+  /*color: #457cd3;*/  /* brighten it for better contrast */
 }
+
+/*.fa-github {*/
+  /* color: #181617 */  /* from github.com logo page*/
+  /*color: #e7e9e8;*/     /* inverted for contrast */
+/*}*/
 
 /* ----- FOOTER ----- */
+
+footer {
+  margin: 60px 0;
+}
 
 footer p {
   color: var(--bright);
