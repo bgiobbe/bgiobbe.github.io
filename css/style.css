@@ -108,20 +108,21 @@ h2,
 h3 {
   font-family: var(--font1);
   margin: 0;
+  text-align: center;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: normal;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: normal;
 }
 
@@ -131,17 +132,49 @@ p {
 
 .content-wrapper {
   margin: 0 auto;
-  padding: 20px 0;
   width: 90%;
 }
 
-/* ----- HEADER ----- */
+/* ----- HEADER - NAME ----- */
+
+header {
+  background: url("../img/background.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#name {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column;
+  padding: 40px 0;
+}
+
+#name .content {
+  background-color: var(--bright-translucent);
+  border-radius: 10px;
+  color: var(--dark);
+  text-align: center;
+  padding: 10px;
+}
+
+#name h3 span {
+  font-size: 80%;
+  font-style: italic;
+}
+
+/* ----- HEADER -- NAV ----- */
+
+nav {
+  padding: 30px 0;
+}
 
 nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
+  background-color: var(--dark-translucent);
   margin: 0;
   padding: 10px;
   border-bottom: 0.5px solid var(--bright);
@@ -169,42 +202,82 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
-/* ----- HEADER - NAME ----- */
+/* ----- MAIN - Projects ----- */
 
-#name {
-  background: url("../img/background.jpg") no-repeat center center;
-  background-size: cover;
-  min-height: 200px;
-  padding: 30px 0;
+#projects {
+  background-color: var(--dark);
+  padding-top: 40px;
 }
 
-#name {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: column;
-  min-height: 200px;
-}
-
-#name .content {
-  background-color: var(--bright-translucent);
-  border-radius: 10px;
-  color: var(--dark);
+#projects h2 {
   text-align: center;
-  padding: 10px;
 }
 
-#name h3 span {
-  font-size: 80%;
-  font-style: italic;
+#projects article {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--pastel2);
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 20px;
 }
+
+#projects article figure {
+  margin: 0;
+  padding: 0;
+}
+
+#projects article figure img {
+  width: 100%;
+}
+
+#projects article h3 {
+  margin: 20px 0;
+}
+
+#projects article .description {
+  margin: 10px 0;
+  padding: 0;
+}
+
+#projects article .description a {
+  background-color: inherit;
+  color: inherit;
+  text-decoration: underline;
+}
+
+#projects article .skills {
+  margin: 30px 0 10px 0;
+}
+
+#projects article .visit {
+  margin: 30px 0 10px 0;
+}
+
+#projects article .visit a {
+  background-color: var(--pastel1);
+  border-radius: 16px;
+  color: var(--dark);
+  margin: 0 0.75em;
+  padding: 10px 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#projects article .visit a:hover {
+  background-color: var(--bright);
+  color: var(--dark);
+}
+
 
 /* ----- MAIN - SKILLS ----- */
 
 #skills {
   background-color: var(--bright);
   color: var(--dark);
-  padding: 30px 0;
+  padding: 40px 0;
 }
 
 #skills .skill-category {
@@ -226,73 +299,6 @@ nav ul li a:hover {
   margin: 0.25em;
   padding: 0.5em;
 }
-
-/* ----- MAIN - Projects ----- */
-
-#projects {
-  background-color: var(--dark);
-  padding: 30px 0;
-}
-
-#projects article {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--pastel2);
-  border-radius: 10px;
-  margin: 30px 0;
-  padding: 20px;
-}
-
-#projects article figure {
-  margin: 0;
-  padding: 0;
-}
-
-#projects article figure img {
-  width: 100%;
-}
-
-#projects article h2 {
-  margin: 30px 0;
-}
-
-#projects article .description {
-  margin: 0;
-  padding: 0;
-}
-
-#projects article .description a {
-  background-color: inherit;
-  color: inherit;
-  text-decoration: underline;
-}
-
-#projects article p {
-  margin-bottom: 10px;
-}
-
-
-#projects article .visit {
-  margin: 30px 0;
-}
-
-#projects article .visit a {
-  background-color: var(--pastel1);
-  border-radius: 16px;
-  color: var(--dark);
-  margin: 0 0.75em;
-  padding: 10px 14px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-#projects article .visit a:hover {
-  background-color: var(--bright);
-  color: var(--dark);
-}
-
 
 /* ----- MAIN - ABOUT ME ----- */
 
@@ -323,7 +329,10 @@ nav ul li a:hover {
 #about-text h2,
 #about-text h3 {
   margin: 20px 0;
-  text-align: center;
+}
+
+#about-text h3 {
+  font-size: 1.75em;
 }
 
 #about-text p {
