@@ -101,6 +101,7 @@ body {
   color: var(--pastel2);
   font-family: Philosopher, Helvetica, Arial, sans-serif;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 h1,
@@ -112,17 +113,17 @@ h3 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2.75em;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 2.25em;
   font-weight: normal;
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: normal;
 }
 
@@ -142,28 +143,31 @@ header {
   background-size: cover;
 }
 
-#name {
+header .content-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-flow: column;
-  padding: 40px 0;
 }
 
-#name .content {
+header .name {
   background-color: var(--bright-translucent);
   border-radius: 10px;
   color: var(--dark);
-  text-align: center;
-  padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0;
+  padding: 5% 1em;
 }
 
-#name h3 span {
+header .name h3 span {
   font-size: 80%;
   font-style: italic;
 }
 
-/* ----- HEADER -- NAV ----- */
+/* ----- HEADER -- NAVIGATION ----- */
 
 nav {
   padding: 30px 0;
@@ -173,11 +177,12 @@ nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: row;
+  flex-flow: row nowrap;
   background-color: var(--dark-translucent);
   margin: 0;
-  padding: 10px;
-  border-bottom: 0.5px solid var(--bright);
+  padding: 3%;
+  border-bottom: 0.5px solid var(--dark);
+  border-top: 0.5px solid var(--dark);
 }
 
 nav ul li {
@@ -187,7 +192,6 @@ nav ul li {
   list-style: none;
   margin: 0;
   padding: 0 auto;
-  text-transform: uppercase;
 }
 
 nav ul li a {
@@ -202,15 +206,39 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
+/* ----- MAIN - SKILLS ----- */
+
+#skills {
+  background-color: var(--bright);
+  color: var(--dark);
+  padding: 40px 0;
+}
+
+#skills .skill-category {
+  margin: 30px 0;
+}
+
+#skills ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+#skills ul li {
+  background-color: var(--pastel1);
+  border-radius: 5px;
+  list-style: none;
+  margin: 0.25em;
+  padding: 0.5em;
+}
+
 /* ----- MAIN - Projects ----- */
 
 #projects {
   background-color: var(--dark);
-  padding-top: 40px;
-}
-
-#projects h2 {
-  text-align: center;
+  padding-top: 60px;
 }
 
 #projects article {
@@ -272,45 +300,17 @@ nav ul li a:hover {
 }
 
 
-/* ----- MAIN - SKILLS ----- */
-
-#skills {
-  background-color: var(--bright);
-  color: var(--dark);
-  padding: 40px 0;
-}
-
-#skills .skill-category {
-  margin: 30px 0;
-}
-
-#skills ul {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0;
-}
-
-#skills ul li {
-  background-color: var(--pastel1);
-  border-radius: 5px;
-  list-style: none;
-  margin: 0.25em;
-  padding: 0.5em;
-}
-
 /* ----- MAIN - ABOUT ME ----- */
 
 #about {
   background-color: var(--pastel2);
   color: var(--dark);
-  padding: 60px 0;
+  padding: 80px 0;
 }
 
 #about .content-wrapper {
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -318,24 +318,20 @@ nav ul li a:hover {
 #about figure {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 0 20px;
 }
 
 #about img {
   width: 100%;
-  box-shadow: 5px 5px var(--bright);
+  box-shadow: 5px 5px var(--dark);
 }
 
-#about-text h2,
-#about-text h3 {
-  margin: 20px 0;
+#about .about-text h2,
+#about .about-text h3 {
+  margin: 40px 0;
 }
 
-#about-text h3 {
-  font-size: 1.75em;
-}
-
-#about-text p {
+#about .about-text p {
   margin-top: 20px;
 }
 
@@ -344,20 +340,25 @@ nav ul li a:hover {
 #contact {
   background-color: var(--dark);
   color: var(--pastel2);
-  margin-top: 60px;
+  padding-top: 80px;
 }
 
 #contact .content-wrapper {
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
 
+#contact figure,
+#contact address,
+#contact .social-icons {
+  margin-top: 60px;
+}
 #contact figure {
   display: flex;
   justify-content: center;
-  margin: 60px 0;
+  margin-top: 60px;
   width: 288px;
 }
 
@@ -382,7 +383,6 @@ nav ul li a:hover {
   flex-flow: row;
   justify-content: space-around;
   align-items: center;
-  margin: 20px 0;
 }
 
 #contact .social-icons p {
@@ -410,7 +410,7 @@ footer {
 }
 
 footer p {
-  color: var(--bright);
+  color: var(--pastel1);
   font-size: 0.875em;
   text-align: center;
 }
@@ -498,9 +498,103 @@ footer p {
    Modify as content requires.
    ========================================================================== */
 
-/*@media only screen and (min-width: 35em) {*/
-  /* Style adjustments for viewports that meet the condition */
-/*}*/
+/*
+ * TABLET STYLE ADJUSTMENTS
+ */
+@media only screen and (min-width: 768px) {
+  
+  h1 {
+    font-size: 5em;
+  }
+  h2 {
+    font-size: 3.75em;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  
+  /* ----- HEADER - NAME ----- */
+
+  #name {
+    padding: 80px 0 40px 0;
+  }
+
+  #name .content {
+    border-radius: 20px;
+    padding: 30px 30px 40px 30px;
+  }
+
+  #name h3 {
+    font-size: 2.5em;
+  }
+
+  /* ----- HEADER -- NAVIGATION ----- */
+
+  nav {
+      padding: 40px 0 60px 0;
+    }
+  nav ul {
+    padding: 15px 10px;
+  }
+  nav ul li {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+  }
+  nav ul li a {
+    padding: 5px 15px;
+  }
+  nav ul li a:hover {
+    border-radius: 20px;
+  }
+
+  /* ----- MAIN - Projects ----- */
+
+  #projects {
+    background-color: var(--dark);
+    padding-top: 120px;
+  }
+
+  #projects .content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  #projects article {
+    flex-basis: 250px;
+    flex-grow: 1;
+    margin: 40px 20px;
+  }
+
+  #projects article .visit {
+    margin: 40px 0 10px 0;
+  }
+
+  #skills .skill-category {
+    margin: 40px 0;
+  }
+  
+  #skills ul {
+    justify-content: center;
+  }
+
+  #skills ul li {
+    border-radius: 0;
+    margin: 0.5em;
+  }
+
+} /* end of TABLET */
+ 
+/*
+ * DESKTOP STYLE ADJUSTMENTS
+ */
+@media only screen and (min-width: 1200px) {
+  
+}
+
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
