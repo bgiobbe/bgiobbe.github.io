@@ -101,7 +101,6 @@ body {
   color: var(--pastel2);
   font-family: Philosopher, Helvetica, Arial, sans-serif;
   font-size: 16px;
-  box-sizing: border-box;
 }
 
 h1,
@@ -159,7 +158,7 @@ header .name {
   justify-content: center;
   align-items: center;
   margin: 60px 0;
-  padding: 5% 1em;
+  padding: 1em 5%;
 }
 
 header .name h3 span {
@@ -175,12 +174,12 @@ nav {
 
 nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-flow: row nowrap;
   background-color: var(--dark-translucent);
   margin: 0;
-  padding: 3%;
+  padding: 1em 5%;
   border-bottom: 0.5px solid var(--dark);
   border-top: 0.5px solid var(--dark);
 }
@@ -196,14 +195,14 @@ nav ul li {
 
 nav ul li a {
   color: var(--bright);
-  padding: 5px;
+  padding: 5px 0.5em;
   text-decoration: none;
 }
 
 nav ul li a:hover {
   background-color: var(--bright);
   color: var(--dark);
-  border-radius: 10px;
+  border-radius: 1em;
 }
 
 /* ----- MAIN - SKILLS ----- */
@@ -211,11 +210,11 @@ nav ul li a:hover {
 #skills {
   background-color: var(--bright);
   color: var(--dark);
-  padding: 40px 0;
+  padding: 60px 0 40px 0;
 }
 
 #skills .skill-category {
-  margin: 30px 0;
+  margin: 40px 0;
 }
 
 #skills ul {
@@ -223,6 +222,7 @@ nav ul li a:hover {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  margin: 20px 0;
   padding: 0;
 }
 
@@ -238,10 +238,11 @@ nav ul li a:hover {
 
 #projects {
   background-color: var(--dark);
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
 #projects article {
+  box-sizing: border-box;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -285,7 +286,7 @@ nav ul li a:hover {
 }
 
 #projects article .visit a {
-  background-color: var(--pastel1);
+  background-color: var(--pastel2);
   border-radius: 16px;
   color: var(--dark);
   margin: 0 0.75em;
@@ -295,7 +296,7 @@ nav ul li a:hover {
 }
 
 #projects article .visit a:hover {
-  background-color: var(--bright);
+  background-color: var(--pastel1);
   color: var(--dark);
 }
 
@@ -393,7 +394,7 @@ nav ul li a:hover {
 
 .fa-linkedin,
 .fa-github {
-  color: var(--pastel1);
+  color: var(--pastel2);
   /*color: #2C64BC;*/  /* from linkedin.com */
   /*color: #457cd3;*/  /* brighten it for better contrast */
 }
@@ -502,7 +503,7 @@ footer p {
  * TABLET STYLE ADJUSTMENTS
  */
 @media only screen and (min-width: 768px) {
-  
+
   h1 {
     font-size: 5em;
   }
@@ -514,76 +515,72 @@ footer p {
     font-size: 2em;
   }
   
-  /* ----- HEADER - NAME ----- */
+  /* ----- TABLET - HEADER - NAME ----- */
 
-  #name {
-    padding: 80px 0 40px 0;
-  }
-
-  #name .content {
+  header .name {
     border-radius: 20px;
+    margin: 80px 0;
     padding: 30px 30px 40px 30px;
   }
 
-  #name h3 {
+  header .name h3 {
     font-size: 2.5em;
   }
 
-  /* ----- HEADER -- NAVIGATION ----- */
+  /* ----- TABLET - HEADER -- NAVIGATION ----- */
 
   nav {
       padding: 40px 0 60px 0;
     }
-  nav ul {
-    padding: 15px 10px;
-  }
+  
   nav ul li {
     font-size: 1.25rem;
     text-transform: uppercase;
   }
-  nav ul li a {
-    padding: 5px 15px;
+
+  /* ----- TABLET - MAIN - SKILLS ----- */
+
+  #skills {
+    padding: 60px 0;
   }
-  nav ul li a:hover {
-    border-radius: 20px;
+ 
+  #skills ul {
+    margin: 30px 0;
   }
 
-  /* ----- MAIN - Projects ----- */
-
-  #projects {
-    background-color: var(--dark);
-    padding-top: 120px;
+  #skills ul li {
+    border-radius: 0;
+    font-size: 1.125rem;
+    margin: 0.5em;
   }
+
+  /* ----- TABLET - MAIN - PROJECTS ----- */
 
   #projects .content {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: 40px;
+    margin: 40px 0 80px 0;
   }
 
   #projects article {
-    flex-basis: 250px;
-    flex-grow: 1;
-    margin: 40px 20px;
-  }
-
-  #projects article .visit {
-    margin: 40px 0 10px 0;
-  }
-
-  #skills .skill-category {
+    width: 47.5%;
     margin: 40px 0;
   }
-  
-  #skills ul {
-    justify-content: center;
+
+  /* ----- TABLET - MAIN - ABOUT ME ----- */
+
+  #about {
+    padding: 120px 0;
   }
 
-  #skills ul li {
-    border-radius: 0;
-    margin: 0.5em;
+  #about .about-text h2 {
+    margin: 80px 0;
+  }
+
+  #about .about-text h3 {
+    margin: 60px 0;
   }
 
 } /* end of TABLET */
