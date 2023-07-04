@@ -88,8 +88,8 @@ textarea {
   --dark: #342B25FF;
   --dark-translucent: #342B2580;
   --bright: #ADC178FF;
-  --bright-translucent: #ADC17880;
   --pastel1: #DDE5B4FF;
+  --pastel1-translucent: #DDE5B480;
   --pastel2: #F0EAD2FF;
   --color5: #A98467FF;
   --font1: "Averia Libre", helvetica, arial, sans-serif; 
@@ -107,27 +107,33 @@ h1,
 h2,
 h3 {
   font-family: var(--font1);
+  line-height: 1em;
   margin: 0;
   text-align: center;
 }
 
 h1 {
-  font-size: 2.75em;
+  font-size: 2.75rem;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 2.25em;
+  font-size: 2.25rem;
   font-weight: normal;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: normal;
 }
 
 p {
   margin: 0;
+}
+
+section {
+  margin: 0;
+  width: 100%;
 }
 
 .content-wrapper {
@@ -140,6 +146,8 @@ p {
 header {
   background: url("../img/background.jpg") no-repeat center center;
   background-size: cover;
+  padding: 40px 0;
+  width: 100%;
 }
 
 header .content-wrapper {
@@ -147,18 +155,22 @@ header .content-wrapper {
   justify-content: center;
   align-items: center;
   flex-flow: column;
+  width: 100%;
 }
 
 header .name {
-  background-color: var(--bright-translucent);
-  border-radius: 10px;
+  background-color: var(--pastel1-translucent);
+  box-sizing: border-box;
+  border-radius: 15px;
   color: var(--dark);
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  margin: 60px 0;
-  padding: 1em 5%;
+  margin: 40px 0;
+  padding: 1rem;
+  text-align: center;
+}
+header .name h1,
+header .name h2,
+header .name h3 {
+  line-height: 1.5em;
 }
 
 header .name h3 span {
@@ -169,19 +181,22 @@ header .name h3 span {
 /* ----- HEADER -- NAVIGATION ----- */
 
 nav {
-  padding: 30px 0;
+  box-sizing: border-box;
+  margin-top: 40px;
+  width: 100%;
 }
 
 nav ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-flow: row nowrap;
   background-color: var(--dark-translucent);
+  border: solid var(--dark);
+  border-width: 0.5px 0;
   margin: 0;
-  padding: 1em 5%;
-  border-bottom: 0.5px solid var(--dark);
-  border-top: 0.5px solid var(--dark);
+  padding: 1em 0;
+  flex-basis: 100%;
 }
 
 nav ul li {
@@ -189,18 +204,18 @@ nav ul li {
   font-family: var(--font1);
   font-size: 0.875em;
   list-style: none;
-  margin: 0;
-  padding: 0 auto;
+  margin: 0 0.5em;
+  padding: 0;
 }
 
 nav ul li a {
-  color: var(--bright);
+  color: var(--pastel1);
   padding: 5px 0.5em;
   text-decoration: none;
 }
 
 nav ul li a:hover {
-  background-color: var(--bright);
+  background-color: var(--pastel1);
   color: var(--dark);
   border-radius: 1em;
 }
@@ -209,12 +224,17 @@ nav ul li a:hover {
 
 #skills {
   background-color: var(--bright);
+  box-sizing: border-box;
   color: var(--dark);
-  padding: 60px 0 40px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0 30px 0;
 }
 
 #skills .skill-category {
-  margin: 40px 0;
+  margin: 30px 0;
 }
 
 #skills ul {
@@ -228,6 +248,9 @@ nav ul li a:hover {
 
 #skills ul li {
   background-color: var(--pastel1);
+  border: 2px outset var(--pastel1);
+  box-shadow: 3px 3px black;
+  font-family: var(--font1);
   border-radius: 5px;
   list-style: none;
   margin: 0.25em;
@@ -238,13 +261,18 @@ nav ul li a:hover {
 
 #projects {
   background-color: var(--dark);
-  padding-top: 80px;
+  color: var(--pastel2);
+  padding: 80px 0 60px 0;
+}
+
+#projects .content-wrapper {
+  margin-top: 50px;
 }
 
 #projects article {
   box-sizing: border-box;
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   border: 1px solid var(--pastel2);
@@ -256,6 +284,7 @@ nav ul li a:hover {
 #projects article figure {
   margin: 0;
   padding: 0;
+  max-width: 300px;
 }
 
 #projects article figure img {
@@ -263,11 +292,11 @@ nav ul li a:hover {
 }
 
 #projects article h3 {
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
 #projects article .description {
-  margin: 10px 0;
+  margin: 40px 0;
   padding: 0;
 }
 
@@ -282,22 +311,25 @@ nav ul li a:hover {
 }
 
 #projects article .visit {
-  margin: 30px 0 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 100%;
 }
 
 #projects article .visit a {
   background-color: var(--pastel2);
   border-radius: 16px;
   color: var(--dark);
-  margin: 0 0.75em;
-  padding: 10px 14px;
+  margin: 0;
+  padding: 8px 10px;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 #projects article .visit a:hover {
   background-color: var(--pastel1);
-  color: var(--dark);
 }
 
 
@@ -332,6 +364,10 @@ nav ul li a:hover {
   margin: 40px 0;
 }
 
+#about .about-text h3 .wide {
+    display: none;
+}
+
 #about .about-text p {
   margin-top: 20px;
 }
@@ -352,57 +388,54 @@ nav ul li a:hover {
 }
 
 #contact figure,
-#contact address,
-#contact .social-icons {
+#contact address {
   margin-top: 60px;
 }
+
 #contact figure {
   display: flex;
   justify-content: center;
-  margin-top: 60px;
-  width: 288px;
+  max-width: 288px;
+  min-width: 288px;
 }
 
-#contact img {
-  width: 100%;
-}
-
-#contact a {
-  color: var(--pastel2);
-  text-decoration: none;
+#contact figure img {
+  max-width: 288px;
+  min-width: 288px;
+  width: 288px;     /* 90% of 320 */
 }
 
 #contact address {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact address a {
+  color: var(--pastel2);
   font-size: 1.5em;
+  text-decoration: none;
   font-style: normal;
-  line-height: 2em;
-  text-align: center;
 }
 
 #contact .social-icons {
   display: flex;
-  flex-flow: row;
+  flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
+  margin-top: 30px;
 }
 
-#contact .social-icons p {
+#contact .social-icons a {
   font-size: 3rem;
-  margin: 0;
   padding: 0 1rem;
 }
 
 .fa-linkedin,
 .fa-github {
   color: var(--pastel2);
-  /*color: #2C64BC;*/  /* from linkedin.com */
-  /*color: #457cd3;*/  /* brighten it for better contrast */
 }
-
-/*.fa-github {*/
-  /* color: #181617 */  /* from github.com logo page*/
-  /*color: #e7e9e8;*/     /* inverted for contrast */
-/*}*/
 
 /* ----- FOOTER ----- */
 
@@ -411,8 +444,7 @@ footer {
 }
 
 footer p {
-  color: var(--pastel1);
-  font-size: 0.875em;
+  color: var(--pastel2);
   text-align: center;
 }
 
@@ -499,51 +531,60 @@ footer p {
    Modify as content requires.
    ========================================================================== */
 
+
 /*
  * TABLET STYLE ADJUSTMENTS
  */
 @media only screen and (min-width: 768px) {
 
   h1 {
-    font-size: 5em;
+    font-size: 3.75em;
   }
   h2 {
-    font-size: 3.75em;
+    font-size: 3em;
     font-weight: bold;
   }
   h3 {
     font-size: 2em;
   }
   
-  /* ----- TABLET - HEADER - NAME ----- */
+  /* ----- TABLET - HEADER ----- */
+
+  header {
+    padding: 60px 0;
+  }
 
   header .name {
-    border-radius: 20px;
-    margin: 80px 0;
-    padding: 30px 30px 40px 30px;
+    border-radius: 17.5px;
+    margin: 60px 0;
   }
-
-  header .name h3 {
-    font-size: 2.5em;
-  }
-
-  /* ----- TABLET - HEADER -- NAVIGATION ----- */
 
   nav {
-      padding: 40px 0 60px 0;
-    }
-  
+    margin-top: 60px;
+    width: auto;
+  }
+
+  nav ul {
+    padding: 1em;
+    flex-basis: initial;
+  }
+
   nav ul li {
-    font-size: 1.25rem;
+    border-width: 1px 0;
+    font-size: 1rem;
     text-transform: uppercase;
   }
 
   /* ----- TABLET - MAIN - SKILLS ----- */
 
   #skills {
-    padding: 60px 0;
+    padding: 80px 0 40px 0;
   }
- 
+  
+  #skills .skill-category {
+    margin: 40px 0;
+  }
+
   #skills ul {
     margin: 30px 0;
   }
@@ -554,43 +595,186 @@ footer p {
     margin: 0.5em;
   }
 
-  /* ----- TABLET - MAIN - PROJECTS ----- */
+  /* ----- TABLET - PROJECTS ----- */
 
-  #projects .content {
+  #projects {
+    padding: 120px 0 40px 0;
+  }
+
+  #projects .content-wrapper {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    margin: 40px 0 80px 0;
+    margin: 70px auto;
+    width: 90%;
   }
 
   #projects article {
-    width: 47.5%;
-    margin: 40px 0;
+    margin: 10px;
+    width: 47%;
   }
 
-  /* ----- TABLET - MAIN - ABOUT ME ----- */
+  /* ----- TABLET - ABOUT ME ----- */
 
   #about {
     padding: 120px 0;
   }
-
   #about .about-text h2 {
     margin: 80px 0;
   }
-
   #about .about-text h3 {
     margin: 60px 0;
   }
+  #about .about-text h3 .wide {
+    display: inline;
+  }
 
+  /* ----- TABLET - CONTACT ----- */
+
+  #contact {
+    padding-top: 120px;
+  }
+  
+  #contact .content-wrapper {
+    flex-flow: row nowrap;
+  }
+
+  #contact figure,
+  #contact address {
+    margin-top: 60px;
+    flex-basis: 50%;
+  }
+
+  /* ----- TABLET - FOOTER ----- */
+
+  footer {
+    margin: 80px 0;
+  }
+  
 } /* end of TABLET */
- 
+
+
 /*
  * DESKTOP STYLE ADJUSTMENTS
  */
 @media only screen and (min-width: 1200px) {
   
-}
+  h1 {
+    font-size: 4.75rem;
+  }
+  h2 {
+    font-size: 3.75rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.125rem;
+  }
+
+  .content-wrapper {
+    width: 80%;
+  }
+  
+  /* ----- DESKTOP - HEADER ----- */
+
+  header { 
+    padding: 80px 0;
+  }
+
+  header .name {
+    border-radius: 21px;
+    margin: 80px 0;
+  }
+
+  nav {
+    margin-top: 80px;
+    width: auto;
+  }
+
+  /* ----- DESKTOP - SKILLS ----- */
+
+  #skills ul li {
+    border: 2px outset var(--pastel1);
+    box-shadow: 3px 3px black;
+    font-family: var(--font1);
+    font-size: 1.25rem;
+    margin: 0.75em;
+  }
+
+  /* ----- DESKTOP - PROJECTS ----- */
+
+  #projects {
+    padding: 140px 0 60px 0;
+  }
+  
+  #projects .content-wrapper {
+    align-items: center;
+    margin: 60px auto;
+    width: 80%;
+  }
+
+  #projects article {
+    border: 2px solid var(--pastel2);
+    margin: 20px;
+    width: 29%;
+  }
+
+/* TODO change order of projects */
+
+  /* ----- DESKTOP - ABOUT ----- */
+
+  #about {
+    padding: 140px 0;
+  }
+
+  #about .content-wrapper {
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 80%;
+  }
+  #about figure {
+    flex-basis: 30%;
+    margin: 0;
+  }
+  #about .about-text {
+    flex-basis: 60%;
+    margin-left: 10%;
+  }
+  #about .about-text h2,
+  #about .about-text h3 {
+    margin: 40px 0;
+    text-align: left;
+  }
+  #about .about-text h2 {
+    /*font-size: 3.5em;*/
+    margin-top: 0;
+  }
+  #about .about-text h3 {
+    font-size: 1.75em;
+    margin-top: 0;
+  }
+
+  /* ----- DESKTOP - CONTACT ----- */
+ 
+  #contact {
+    padding-top: 140px;
+  }
+  
+  #contact figure,
+  #contact address {
+    margin-top: 80px;
+  }
+  
+  /* ----- DESKTOP - FOOTER ----- */
+
+  footer {
+    margin: 140px 0;
+  }
+    
+} /* end of DESKTOP */
 
 
 @media print,
