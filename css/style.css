@@ -349,6 +349,7 @@ nav ul li a:hover {
   align-items: center;
 }
 
+/* TODO Add profile picture
 #about figure {
   display: flex;
   justify-content: center;
@@ -358,10 +359,12 @@ nav ul li a:hover {
 #about img {
   width: 100%;
   border-radius: 50%;
-  /*box-shadow: 5px 5px var(--dark);*/
 }
+*/
 
+/* Save for use with profile picture
 #about .about-text h2,
+*/
 #about .about-text h3 {
   margin: 40px 0;
 }
@@ -391,20 +394,17 @@ nav ul li a:hover {
 
 #contact figure,
 #contact address {
-  margin-top: 60px;
+  margin: 60px 0 0 0;
 }
 
 #contact figure {
   display: flex;
   justify-content: center;
-  max-width: 288px;
-  min-width: 288px;
+  width: 240px;
 }
 
 #contact figure img {
-  max-width: 288px;
-  min-width: 288px;
-  width: 288px;     /* 90% of 320 */
+  width: 240px;
 }
 
 #contact address {
@@ -431,7 +431,7 @@ nav ul li a:hover {
 
 #contact .social-icons a {
   font-size: 3rem;
-  padding: 0 1rem;
+  padding: 0 0.4em;
 }
 
 .fa-linkedin,
@@ -623,13 +623,17 @@ footer p {
     padding: 120px 0;
   }
 
+  /* TODO Add profile picture
   #about figure {
     width: 30%;
   }
+  */
 
+  /* Save for use with profile picture
   #about .about-text h2 {
     margin: 80px 0;
   }
+  */
 
   #about .about-text h3 {
     margin: 60px 0;
@@ -647,12 +651,8 @@ footer p {
   
   #contact .content-wrapper {
     flex-flow: row nowrap;
-  }
-
-  #contact figure,
-  #contact address {
-    margin-top: 60px;
-    flex-basis: 50%;
+    justify-content: space-between;
+    max-width: 540px;
   }
 
   /* ----- TABLET - FOOTER ----- */
@@ -743,28 +743,38 @@ footer p {
     max-width: 80%;
   }
 
+  /* TODO Add profile picture
   #about figure {
     width: 30%;
     margin: 0;
   }
+  
   #about .about-text {
     flex-basis: 60%;
     margin-left: 10%;
   }
-  #about .about-text h2,
-  #about .about-text h3 {
-    margin: 40px 0;
+
+  #about .about-text h2 {
+    margin: 0 0 40px 0;
     text-align: left;
   }
-  
-  #about .about-text h2 {
-    /*font-size: 3.5em;*/
-    margin-top: 0;
+  */
+
+  /* Without profile pic */
+  #about .about-text {
+    max-width: 640px;
   }
+
+  #about .about-text h2 {
+    margin: 0 0 60px 0;
+    text-align: center;
+  }
+  /* end */
 
   #about .about-text h3 {
     font-size: 1.75em;
-    margin-top: 0;
+    margin: 0 0 40px 0;
+    text-align: left;
   }
 
   /* ----- DESKTOP - CONTACT ----- */
@@ -773,11 +783,23 @@ footer p {
     padding-top: 140px;
   }
   
+  #contact .content-wrapper {
+    max-width: 600px;
+  }
+
   #contact figure,
   #contact address {
     margin-top: 80px;
   }
   
+  #contact figure {
+    width: 260px;
+  }
+
+  #contact figure img {
+    width: 260px;
+  }
+
   /* ----- DESKTOP - FOOTER ----- */
 
   footer {
