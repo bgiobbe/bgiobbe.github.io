@@ -242,7 +242,7 @@ nav ul li a:hover {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   margin: 20px 0;
   padding: 0;
 }
@@ -253,9 +253,14 @@ nav ul li a:hover {
   box-shadow: 3px 3px black;
   font-family: var(--font1);
   border-radius: 5px;
+  line-height: 1em;
   list-style: none;
   margin: 0.25em;
   padding: 0.5em;
+}
+
+#skills ul li img {
+  height: 1.5em;
 }
 
 /* ----- MAIN - Projects ----- */
