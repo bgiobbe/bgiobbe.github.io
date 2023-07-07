@@ -313,20 +313,23 @@ nav ul li a:hover {
 
 #projects article .visit {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-flow: row nowrap;
-  width: 100%;
+  width: 246px;
 }
 
 #projects article .visit a {
   background-color: var(--pastel2);
-  border-radius: 16px;
+  border-radius: 20px;
   color: var(--dark);
+  font-size: 1.125em;
   margin: 0;
-  padding: 8px 10px;
+  padding: 10px 15px;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  width: 4.75em;
 }
 
 #projects article .visit a:hover {
@@ -607,12 +610,13 @@ footer p {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     margin: 70px auto;
     width: 90%;
   }
 
   #projects article {
+    justify-content: space-between;
     margin: 10px;
     width: 47%;
   }
@@ -719,7 +723,6 @@ footer p {
   }
   
   #projects .content-wrapper {
-    align-items: center;
     margin: 60px auto;
     width: 80%;
   }
