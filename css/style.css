@@ -210,15 +210,16 @@ nav ul li {
 }
 
 nav ul li a {
+  border-radius: 1em;
   color: var(--pastel1);
   padding: 5px 0.5em;
   text-decoration: none;
+  transition: all 0.5s ease-out;
 }
 
 nav ul li a:hover {
   background-color: var(--pastel1);
   color: var(--dark);
-  border-radius: 1em;
 }
 
 /* ----- MAIN - SKILLS ----- */
@@ -446,6 +447,12 @@ nav ul li a:hover {
 .fa-linkedin,
 .fa-github {
   color: var(--pastel2);
+  transition: all 0.5s ease;
+}
+
+.fa-linkedin:hover,
+.fa-github:hover {
+    transform: scale(1.1);
 }
 
 /* ----- FOOTER ----- */
