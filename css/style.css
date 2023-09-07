@@ -191,7 +191,7 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   background-color: var(--dark-translucent);
   border: solid var(--dark);
   border-width: 0.5px 0;
@@ -205,7 +205,7 @@ nav ul li {
   font-family: var(--font1);
   font-size: 0.875em;
   list-style: none;
-  margin: 0 0.5em;
+  margin: 5px 0.5em;
   padding: 0;
 }
 
