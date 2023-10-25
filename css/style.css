@@ -365,7 +365,7 @@ nav ul li a:hover {
   align-items: center;
 }
 
-/* TODO Add profile picture
+/* profile picture*/
 #about figure {
   display: flex;
   justify-content: center;
@@ -376,11 +376,10 @@ nav ul li a:hover {
   width: 100%;
   border-radius: 50%;
 }
-*/
 
-/* Save for use with profile picture
+
+
 #about .about-text h2,
-*/
 #about .about-text h3 {
   margin: 40px 0;
 }
@@ -645,19 +644,12 @@ footer p {
   #about {
     padding: 120px 0;
   }
-
-  /* TODO Add profile picture
+  
   #about figure {
     width: 30%;
   }
-  */
 
-  /* Save for use with profile picture
-  #about .about-text h2 {
-    margin: 80px 0;
-  }
-  */
-
+  #about .about-text h2,
   #about .about-text h3 {
     margin: 60px 0;
   }
@@ -752,7 +744,6 @@ footer p {
     width: 29%;
   }
 
-/* TODO change order of projects */
 
   /* ----- DESKTOP - ABOUT ----- */
 
@@ -765,7 +756,7 @@ footer p {
     max-width: 80%;
   }
 
-  /* TODO Add profile picture
+  /* profile picture */
   #about figure {
     width: 30%;
     margin: 0;
@@ -780,9 +771,8 @@ footer p {
     margin: 0 0 40px 0;
     text-align: left;
   }
-  */
 
-  /* Without profile pic */
+  /* Without profile pic
   #about .about-text {
     max-width: 640px;
   }
@@ -791,7 +781,7 @@ footer p {
     margin: 0 0 60px 0;
     text-align: center;
   }
-  /* end */
+  */
 
   #about .about-text h3 {
     font-size: 1.75em;
